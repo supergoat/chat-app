@@ -1,21 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+// @flow
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-
+import CAColors from './src/common/CAColors';
+import Playground from './src/Playground';
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Welcome</Text>
+        <Playground />
       </View>
     );
   }
@@ -24,6 +19,6 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
+    backgroundColor: CAColors.alabaster
   },
 });
