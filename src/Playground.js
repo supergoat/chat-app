@@ -40,7 +40,6 @@ class Playground extends Component<PlaygroundProps, Playgroundstate> {
   }
 }
 
-
 type ExampleProps = { render: Function }
 type ExampleState = { inner: any };
 

@@ -11,11 +11,6 @@ import CAStyleSheet from "../common/CAStyleSheet";
 /* Config
 ============================================================================= */
 let STATUS_BAR_HEIGHT = 20;
-if (Platform.OS === "android" && Platform.Version && Platform.Version < 21) {
-  STATUS_BAR_HEIGHT = 0;
-}
-const HEADER_HEIGHT =
-  Platform.OS === "ios" ? 90 + STATUS_BAR_HEIGHT : 50 + STATUS_BAR_HEIGHT;
 
 /* =============================================================================
 <CAHeader />
@@ -25,7 +20,7 @@ View Header
 ============================================================================= */
 class CAHeader extends Component<{}, {}> {
 
-  static __cards__: (Function) => void
+  static __cards__: Function
 
   render() {
     return (
@@ -40,16 +35,18 @@ class CAHeader extends Component<{}, {}> {
 ============================================================================= */
 const styles = CAStyleSheet.create({
   header: {
-    height: HEADER_HEIGHT,
     alignItems: 'center',
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: 15,
-    paddingTop: HEADER_HEIGHT / 2,
     ios: {
+      paddingTop: (90 + STATUS_BAR_HEIGHT) / 2,
+      height: 90 + STATUS_BAR_HEIGHT,
       backgroundColor: CAColors.gallery,
     },
     android: {
+      paddingTop: (50 + STATUS_BAR_HEIGHT) / 2,
+      height: 50 + STATUS_BAR_HEIGHT,
       backgroundColor: CAColors.riverBed,
     }
   },

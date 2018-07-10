@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CAHeader renders correctly when the Platform is android 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "backgroundColor": "#EEEEEE",
+      "height": 110,
+      "justifyContent": "center",
+      "padding": 15,
+      "paddingTop": 55,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#333C4E",
+        "fontSize": 28,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    ChatApp
+  </Text>
+</View>
+`;
+
+exports[`CAHeader renders correctly when the Platform is ios 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "backgroundColor": "#EEEEEE",
+      "height": 110,
+      "justifyContent": "center",
+      "padding": 15,
+      "paddingTop": 55,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#333C4E",
+        "fontSize": 28,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    ChatApp
+  </Text>
+</View>
+`;
