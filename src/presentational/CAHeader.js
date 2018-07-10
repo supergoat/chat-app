@@ -14,7 +14,8 @@ let STATUS_BAR_HEIGHT = 20;
 if (Platform.OS === "android" && Platform.Version && Platform.Version < 21) {
   STATUS_BAR_HEIGHT = 0;
 }
-const HEADER_HEIGHT = 90 + STATUS_BAR_HEIGHT;
+const HEADER_HEIGHT =
+  Platform.OS === "ios" ? 90 + STATUS_BAR_HEIGHT : 50 + STATUS_BAR_HEIGHT;
 
 /* =============================================================================
 <CAHeader />
@@ -39,18 +40,26 @@ class CAHeader extends Component<{}, {}> {
 ============================================================================= */
 const styles = CAStyleSheet.create({
   header: {
-    backgroundColor: CAColors.gallery,
     height: HEADER_HEIGHT,
     alignItems: 'center',
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: 15,
-    paddingTop: HEADER_HEIGHT / 2
+    paddingTop: HEADER_HEIGHT / 2,
+    ios: {
+      backgroundColor: CAColors.gallery,
+    },
+    android: {
+      backgroundColor: CAColors.riverBed,
+    }
   },
   title: {
     color: CAColors.oxfordBlue,
     fontSize: 28,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    android: {
+      color: CAColors.white
+    }
   }
 });
 
