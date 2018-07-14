@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeStamp displays 'YESTERDAY' when the date was yesterday 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#333C4E",
+        "fontSize": 12,
+      },
+      undefined,
+    ]
+  }
+>
+  YESTERDAY
+</Text>
+`;
+
+exports[`TimeStamp displays the date when the date was before yesterday 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#333C4E",
+        "fontSize": 12,
+      },
+      undefined,
+    ]
+  }
+>
+  18-02-01
+</Text>
+`;
+
+exports[`TimeStamp displays the time (HH:mm) when the date is today 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#333C4E",
+        "fontSize": 12,
+      },
+      undefined,
+    ]
+  }
+>
+  08:05
+</Text>
+`;

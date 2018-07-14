@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfilePhoto displays a placeholder image when the profilePhoto is NOT provided 1`] = `
+<Image
+  alt="James Gordon"
+  source={
+    Object {
+      "testUri": "../../../src/assets/img/profile_photo_placeholder.png",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#EEEEEE",
+        "borderRadius": 25,
+        "height": 50,
+        "width": 50,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`ProfilePhoto displays the profilePhoto when its provided 1`] = `
+<Image
+  alt="Alex Stone"
+  source={
+    Object {
+      "uri": "https://placekitten.com/60/60",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#EEEEEE",
+        "borderRadius": 25,
+        "height": 50,
+        "width": 50,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

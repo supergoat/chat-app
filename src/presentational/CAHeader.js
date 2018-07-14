@@ -8,9 +8,11 @@ import {
 import CAColors from "../common/CAColors";
 import CAStyleSheet from "../common/CAStyleSheet";
 
-/* Config
+/* Constants
 ============================================================================= */
-let STATUS_BAR_HEIGHT = 20;
+const STATUS_BAR_HEIGHT = 20;
+const IOS_HEADER_HEIGHT = 90 + STATUS_BAR_HEIGHT;
+const ANDROID_HEADER_HEIGHT = 50 + STATUS_BAR_HEIGHT;
 
 /* =============================================================================
 <CAHeader />
@@ -40,13 +42,15 @@ const styles = CAStyleSheet.create({
     alignItems: 'flex-start',
     padding: 15,
     ios: {
-      paddingTop: (90 + STATUS_BAR_HEIGHT) / 2,
-      height: 90 + STATUS_BAR_HEIGHT,
-      backgroundColor: CAColors.gallery,
+      paddingTop: IOS_HEADER_HEIGHT / 2,
+      height: IOS_HEADER_HEIGHT,
+      backgroundColor: CAColors.alabaster,
+      borderBottomWidth: 1,
+      borderBottomColor: CAColors.gallery,
     },
     android: {
-      paddingTop: (50 + STATUS_BAR_HEIGHT) / 2,
-      height: 50 + STATUS_BAR_HEIGHT,
+      paddingTop: ANDROID_HEADER_HEIGHT / 2,
+      height: ANDROID_HEADER_HEIGHT,
       backgroundColor: CAColors.riverBed,
     }
   },
@@ -62,7 +66,6 @@ const styles = CAStyleSheet.create({
 
 /* Playground Cards
 ============================================================================= */
-
 CAHeader.__cards__ = define => {
   define("Simple", () => <CAHeader />);
 };

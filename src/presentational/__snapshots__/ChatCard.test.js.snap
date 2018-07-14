@@ -1,0 +1,409 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatCard displays a notification when there are undread messages 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "flexDirection": "row",
+      "height": 80,
+    }
+  }
+>
+  <Image
+    alt="James Gordon"
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/profile_photo_placeholder.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#EEEEEE",
+          "borderRadius": 25,
+          "height": 50,
+          "width": 50,
+        },
+        Object {
+          "marginLeft": 15,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#EEEEEE",
+        "flex": 1,
+        "height": 80,
+        "justifyContent": "center",
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        James Gordon
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#333C4E",
+              "fontSize": 12,
+            },
+            Object {},
+          ]
+        }
+      >
+        15:30
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#333C4E",
+            "flex": 0.95,
+          }
+        }
+      >
+        Hey man how is it going? Long time no see.
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ChatCard displays the profilePhoto when it is provided 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "flexDirection": "row",
+      "height": 80,
+    }
+  }
+>
+  <Image
+    alt="Alex Stone"
+    source={
+      Object {
+        "uri": "https://placekitten.com/60/60",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#EEEEEE",
+          "borderRadius": 25,
+          "height": 50,
+          "width": 50,
+        },
+        Object {
+          "marginLeft": 15,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#EEEEEE",
+        "flex": 1,
+        "height": 80,
+        "justifyContent": "center",
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Alex Stone
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#333C4E",
+              "fontSize": 12,
+            },
+            Object {},
+          ]
+        }
+      >
+        15:30
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#333C4E",
+            "flex": 0.95,
+          }
+        }
+      >
+        Hey whats up?
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ChatCard it displays a profilePhoto placeholder when it is NOT provided 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "flexDirection": "row",
+      "height": 80,
+    }
+  }
+>
+  <Image
+    alt="James Gordon"
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/profile_photo_placeholder.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#EEEEEE",
+          "borderRadius": 25,
+          "height": 50,
+          "width": 50,
+        },
+        Object {
+          "marginLeft": 15,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#EEEEEE",
+        "flex": 1,
+        "height": 80,
+        "justifyContent": "center",
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        James Gordon
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#333C4E",
+              "fontSize": 12,
+            },
+            Object {},
+          ]
+        }
+      >
+        15:30
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#333C4E",
+            "flex": 0.95,
+          }
+        }
+      >
+        Hey how is it going?
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ChatCard truncates the latest message text when its longer than one line 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "flexDirection": "row",
+      "height": 80,
+    }
+  }
+>
+  <Image
+    alt="James Gordon"
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/profile_photo_placeholder.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#EEEEEE",
+          "borderRadius": 25,
+          "height": 50,
+          "width": 50,
+        },
+        Object {
+          "marginLeft": 15,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#EEEEEE",
+        "flex": 1,
+        "height": 80,
+        "justifyContent": "center",
+        "margin": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        James Gordon
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#333C4E",
+              "fontSize": 12,
+            },
+            Object {},
+          ]
+        }
+      >
+        15:30
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#333C4E",
+            "flex": 0.95,
+          }
+        }
+      >
+        Hey man how is it going? Long time no see.
+      </Text>
+    </View>
+  </View>
+</View>
+`;

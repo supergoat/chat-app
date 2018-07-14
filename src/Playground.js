@@ -4,7 +4,7 @@ import type { Element } from 'react';
 import { View, ScrollView } from "react-native";
 
 // Import the module you are testing
-import Module from './presentational/CAHeader'
+import Module from './presentational/ChatCard'
 
 type PlaygroundProps = {}
 type Playgroundstate = { content: Array<Element<any>> };
@@ -33,7 +33,7 @@ class Playground extends Component<PlaygroundProps, Playgroundstate> {
 
   render() {
     return (
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1, marginTop: 50 }}>
         {this.state.content}
       </ScrollView>
     );
