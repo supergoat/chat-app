@@ -1,17 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CAHeader renders correctly when the Platform is android 1`] = `
+exports[`CAHeader renders correctly when leftItem and rightItem are provided 1`] = `
 <View
   style={
     Object {
-      "alignItems": "flex-start",
+      "alignItems": "center",
       "backgroundColor": "#F9F9F9",
       "borderBottomColor": "#EEEEEE",
       "borderBottomWidth": 1,
+      "flexDirection": "row",
       "height": 110,
       "justifyContent": "center",
       "padding": 15,
       "paddingTop": 55,
+      "zIndex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": "100%",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <Text>
+        left item
+      </Text>
+    </View>
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#333C4E",
+        "flex": 1,
+        "fontSize": 28,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    ChatApp
+  </Text>
+  <View
+    style={
+      Object {
+        "height": "100%",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <Text>
+        right item
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CAHeader renders correctly when leftItem is provided 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F9F9F9",
+      "borderBottomColor": "#EEEEEE",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "height": 110,
+      "justifyContent": "center",
+      "padding": 15,
+      "paddingTop": 55,
+      "zIndex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": "100%",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <Text>
+        left item
+      </Text>
+    </View>
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#333C4E",
+        "flex": 1,
+        "fontSize": 28,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    ChatApp
+  </Text>
+</View>
+`;
+
+exports[`CAHeader renders correctly when rightItem is provided 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F9F9F9",
+      "borderBottomColor": "#EEEEEE",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "height": 110,
+      "justifyContent": "center",
+      "padding": 15,
+      "paddingTop": 55,
+      "zIndex": 1,
     }
   }
 >
@@ -19,6 +127,53 @@ exports[`CAHeader renders correctly when the Platform is android 1`] = `
     style={
       Object {
         "color": "#333C4E",
+        "flex": 1,
+        "fontSize": 28,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    ChatApp
+  </Text>
+  <View
+    style={
+      Object {
+        "height": "100%",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <Text>
+        right item
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CAHeader renders correctly when the Platform is android 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F9F9F9",
+      "borderBottomColor": "#EEEEEE",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "height": 110,
+      "justifyContent": "center",
+      "padding": 15,
+      "paddingTop": 55,
+      "zIndex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#333C4E",
+        "flex": 1,
         "fontSize": 28,
         "fontWeight": "bold",
       }
@@ -33,14 +188,16 @@ exports[`CAHeader renders correctly when the Platform is ios 1`] = `
 <View
   style={
     Object {
-      "alignItems": "flex-start",
+      "alignItems": "center",
       "backgroundColor": "#F9F9F9",
       "borderBottomColor": "#EEEEEE",
       "borderBottomWidth": 1,
+      "flexDirection": "row",
       "height": 110,
       "justifyContent": "center",
       "padding": 15,
       "paddingTop": 55,
+      "zIndex": 1,
     }
   }
 >
@@ -48,6 +205,7 @@ exports[`CAHeader renders correctly when the Platform is ios 1`] = `
     style={
       Object {
         "color": "#333C4E",
+        "flex": 1,
         "fontSize": 28,
         "fontWeight": "bold",
       }

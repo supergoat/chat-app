@@ -67,19 +67,19 @@ const styles = CAStyleSheet.create({
 
 /* Playground Cards - the different states of NotificationBadge
 ============================================================================= */
-NotificationBadge.__cards__ = define => {
-  define('Number of notifications less than 1', () => {
-    return <NotificationBadge noOfNotifications={0} />;
-  });
-
-  define('Number of notifications less than 100', () => {
-    return <NotificationBadge noOfNotifications={10} />;
-  });
-
-  define('Number of notifications over 99', () => {
-    return <NotificationBadge noOfNotifications={100} />;
-  });
-};
+// NotificationBadge.__cards__ = define => {
+//   define('Number of notifications less than 1', () => {
+//     return <NotificationBadge noOfNotifications={0} />;
+//   });
+//
+//   define('Number of notifications less than 100', () => {
+//     return <NotificationBadge noOfNotifications={10} />;
+//   });
+//
+//   define('Number of notifications over 99', () => {
+//     return <NotificationBadge noOfNotifications={100} />;
+//   });
+// };
 
 /* Export
 ============================================================================= */

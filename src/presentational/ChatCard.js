@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
 import ProfilePhoto from './ProfilePhoto';
 import TimeStamp from './TimeStamp';
@@ -32,6 +33,7 @@ Displays information about a chat
 @param { string } name - The name of the person the user is talking to
 @param { object } latestMessage - The latest message of the chat
 @param { string } unRead - The number of unRead messages
+@param { function } onPress - Function called when ChatCard is pressed
 ============================================================================= */
 type Props = {
   profilePhoto?: string,
@@ -40,7 +42,8 @@ type Props = {
     text: string,
     createdAt: Date
   },
-  unRead: number
+  unRead: number,
+  onPress: Function
 };
 class ChatCard extends Component<Props> {
   static __cards__: Function;
@@ -50,9 +53,12 @@ class ChatCard extends Component<Props> {
   };
 
   render() {
-    const { profilePhoto, name, latestMessage, unRead } = this.props;
+    const { profilePhoto, name, latestMessage, unRead, onPress } = this.props;
     return (
-      <View style={styles.chatCard}>
+      <TouchableOpacity
+        onPress={onPress}
+        style={styles.chatCard}
+      >
         <ProfilePhoto
           profilePhoto={profilePhoto}
           name={name}
@@ -84,7 +90,7 @@ class ChatCard extends Component<Props> {
             />
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
@@ -133,68 +139,68 @@ const styles = CAStyleSheet.create({
 
 /* Playground Cards - the different states of ChatCard
 ============================================================================= */
-ChatCard.__cards__ = define => {
-  let anHourAgo = new Date();
-  anHourAgo.setHours(anHourAgo.getHours() - 1);
-
-  let aDayAgo = new Date();
-  aDayAgo.setDate(aDayAgo.getDate() - 1);
-
-  let twoDaysAgo = new Date();
-  twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
-
-  define('Simple', () => {
-    return (
-      <ChatCard
-        profilePhoto="https://placekitten.com/60/60"
-        name="Alex Stone"
-        latestMessage={{
-          text: 'Hey whats up?',
-          createdAt: aDayAgo
-        }}
-        unRead={10}
-      />
-    );
-  });
-
-  define('With notification over 99', () => {
-    return (
-      <ChatCard
-        name="Alex Stone"
-        latestMessage={{
-          text: 'Hey man how is it going? Long time no see.',
-          createdAt: anHourAgo
-        }}
-        unRead={100}
-      />
-    );
-  });
-
-  define('With truncated latest message text', () => {
-    return (
-      <ChatCard
-        name="Alex Stone"
-        latestMessage={{
-          text: 'Hey man how is it going? Long time no see.',
-          createdAt: aDayAgo
-        }}
-      />
-    );
-  });
-
-  define('With the date as a timestamp and a notification', () => {
-    return (
-      <ChatCard
-        name="Alex Stone"
-        latestMessage={{
-          text: 'Hey whats up?',
-          createdAt: twoDaysAgo
-        }}
-        unRead={10}
-      />
-    );
-  });
-};
+// ChatCard.__cards__ = define => {
+//   let anHourAgo = new Date();
+//   anHourAgo.setHours(anHourAgo.getHours() - 1);
+//
+//   let aDayAgo = new Date();
+//   aDayAgo.setDate(aDayAgo.getDate() - 1);
+//
+//   let twoDaysAgo = new Date();
+//   twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
+//
+//   define('Simple', () => {
+//     return (
+//       <ChatCard
+//         profilePhoto="https://placekitten.com/60/60"
+//         name="Alex Stone"
+//         latestMessage={{
+//           text: 'Hey whats up?',
+//           createdAt: aDayAgo
+//         }}
+//         unRead={10}
+//       />
+//     );
+//   });
+//
+//   define('With notification over 99', () => {
+//     return (
+//       <ChatCard
+//         name="Alex Stone"
+//         latestMessage={{
+//           text: 'Hey man how is it going? Long time no see.',
+//           createdAt: anHourAgo
+//         }}
+//         unRead={100}
+//       />
+//     );
+//   });
+//
+//   define('With truncated latest message text', () => {
+//     return (
+//       <ChatCard
+//         name="Alex Stone"
+//         latestMessage={{
+//           text: 'Hey man how is it going? Long time no see.',
+//           createdAt: aDayAgo
+//         }}
+//       />
+//     );
+//   });
+//
+//   define('With the date as a timestamp and a notification', () => {
+//     return (
+//       <ChatCard
+//         name="Alex Stone"
+//         latestMessage={{
+//           text: 'Hey whats up?',
+//           createdAt: twoDaysAgo
+//         }}
+//         unRead={10}
+//       />
+//     );
+//   });
+// };
 
 /* Export
 ============================================================================= */
