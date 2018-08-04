@@ -61,24 +61,24 @@ const styles = CAStyleSheet.create({
 
 /* Playground Cards - the different states of ProfilePhoto
 ============================================================================= */
-ProfilePhoto.__cards__ = define => {
-  define("Without Profile Photo", () => {
-    return (
-      <ProfilePhoto
-        name="James Gordon"
-      />
-    )
-  });
-
-  define("With Profile Photo", () => {
-     return (
-       <ProfilePhoto
-         profilePhoto='https://placekitten.com/60/60'
-         name="Alex Stone"
-       />
-     )
-  });
-};
+// ProfilePhoto.__cards__ = define => {
+//   define("Without Profile Photo", () => {
+//     return (
+//       <ProfilePhoto
+//         name="James Gordon"
+//       />
+//     )
+//   });
+//
+//   define("With Profile Photo", () => {
+//      return (
+//        <ProfilePhoto
+//          profilePhoto='https://placekitten.com/60/60'
+//          name="Alex Stone"
+//        />
+//      )
+//   });
+// };
 
 
 /* Export

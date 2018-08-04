@@ -26,6 +26,7 @@ describe('TimeStamp', () => {
   it('displays the time (HH:mm) when the date is today', () => {
 
     let anHourAgo = new Date();
+    // Set the date to one hour ago
     anHourAgo.setHours(anHourAgo.getHours() - 1);
 
     const tree = renderer
@@ -39,6 +40,7 @@ describe('TimeStamp', () => {
 
   it("displays 'YESTERDAY' when the date was yesterday", () => {
     let aDayAgo = new Date();
+    // Set the date to one day before
     aDayAgo.setDate(aDayAgo.getDate() - 1);
 
     const tree = renderer
@@ -52,6 +54,7 @@ describe('TimeStamp', () => {
 
   it('displays the date when the date was before yesterday', () => {
     let towDaysAgo = new Date();
+    // Set the date to two days before
     towDaysAgo.setDate(towDaysAgo.getDate() - 2);
 
     const tree = renderer
