@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import type { NavigationScreenProp } from 'react-navigation';
 import {
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform
 } from 'react-native';
 import CAStyleSheet from "../common/CAStyleSheet";
 import chevronLeft from '../assets/img/chevron_left.png';
+import arrowBack from '../assets/img/arrow_back.png';
 
 /** ============================================================================
 <BackButton
@@ -29,7 +31,7 @@ class BackButton extends Component<Props> {
         onPress={() => navigation.pop()}
         style={styles.back}
       >
-        <Image source={chevronLeft} style={styles.backIcon} />
+        <Image source={Platform.OS === 'ios' ? chevronLeft : arrowBack} style={styles.backIcon} />
       </TouchableOpacity>
     )
   }

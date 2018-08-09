@@ -1,10 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BackButton renders correctly 1`] = `
-<TouchableOpacity
-  onPress={[Function]}
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "opacity": 1,
       "paddingRight": 15,
     }
   }
@@ -22,5 +30,5 @@ exports[`BackButton renders correctly 1`] = `
       }
     }
   />
-</TouchableOpacity>
+</View>
 `;

@@ -9,6 +9,7 @@ const NAMED_COLORS: COLOR_TYPES = {
   stRopaz: '#2E589B',
   riverBed: '#424B5C',
   oxfordBlue: '#333C4E',
+  mariner: '#2277D8',
   alabaster: '#F9F9F9',
   alabasterLight: '#FBFBFB',
   apple: '#32CD32',

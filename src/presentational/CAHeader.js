@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
 import {
-  Platform,
   Text,
   TouchableOpacity,
   View
@@ -59,7 +58,7 @@ const styles = CAStyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 15,
-    zIndex: 1, // Removes the shadow header caused by react-navigation
+    zIndex: 1, // Removes shadow that is sometimes caused by react-navigation
     ios: {
       paddingTop: IOS_HEADER_HEIGHT / 2,
       height: IOS_HEADER_HEIGHT,

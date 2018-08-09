@@ -7,6 +7,7 @@ import {
   View
 } from 'react-native';
 import CAHeader from '../presentational/CAHeader';
+import MessageInput from '../presentational/MessageInput';
 import CAColors from '../common/CAColors';
 import CAStyleSheet from "../common/CAStyleSheet";
 
@@ -29,7 +30,8 @@ class ChatScreen extends Component<Props> {
           title={'ChatScreen'}
           leftItem={<BackButton navigation={navigation} />}
         />
-        <Text>ChatScreen</Text>
+        <Text style={{flex: 1}}>ChatScreen</Text>
+        <MessageInput />
       </View>
     );
   }

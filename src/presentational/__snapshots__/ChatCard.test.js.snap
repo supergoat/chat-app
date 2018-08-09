@@ -1,13 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ChatCard displays a notification when there are undread messages 1`] = `
-<TouchableOpacity
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "alignItems": "center",
       "backgroundColor": "#FFFFFF",
       "flexDirection": "row",
       "height": 80,
+      "opacity": 1,
     }
   }
 >
@@ -131,17 +140,26 @@ exports[`ChatCard displays a notification when there are undread messages 1`] = 
       </View>
     </View>
   </View>
-</TouchableOpacity>
+</View>
 `;
 
 exports[`ChatCard displays the profilePhoto when it is provided 1`] = `
-<TouchableOpacity
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "alignItems": "center",
       "backgroundColor": "#FFFFFF",
       "flexDirection": "row",
       "height": 80,
+      "opacity": 1,
     }
   }
 >
@@ -233,17 +251,26 @@ exports[`ChatCard displays the profilePhoto when it is provided 1`] = `
       </Text>
     </View>
   </View>
-</TouchableOpacity>
+</View>
 `;
 
 exports[`ChatCard it displays a profilePhoto placeholder when it is NOT provided 1`] = `
-<TouchableOpacity
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "alignItems": "center",
       "backgroundColor": "#FFFFFF",
       "flexDirection": "row",
       "height": 80,
+      "opacity": 1,
     }
   }
 >
@@ -335,17 +362,26 @@ exports[`ChatCard it displays a profilePhoto placeholder when it is NOT provided
       </Text>
     </View>
   </View>
-</TouchableOpacity>
+</View>
 `;
 
 exports[`ChatCard truncates the latest message text when its longer than one line 1`] = `
-<TouchableOpacity
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "alignItems": "center",
       "backgroundColor": "#FFFFFF",
       "flexDirection": "row",
       "height": 80,
+      "opacity": 1,
     }
   }
 >
@@ -437,5 +473,5 @@ exports[`ChatCard truncates the latest message text when its longer than one lin
       </Text>
     </View>
   </View>
-</TouchableOpacity>
+</View>
 `;
