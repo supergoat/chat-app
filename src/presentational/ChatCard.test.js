@@ -2,20 +2,9 @@
 import React from 'react';
 import ChatCard from './ChatCard';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 describe('ChatCard', () => {
-  // Mock TouchableOpacity so we can access onPress
-  jest.mock('TouchableOpacity', () => {
-    const RealComponent = require.requireActual('TouchableOpacity');
-    const React = require('React');
-    class TouchableOpacity extends React.Component {
-      render() {
-        return React.createElement('TouchableOpacity', this.props, this.props.children);
-      }
-    }
-    TouchableOpacity.propTypes = RealComponent.propTypes;
-    return TouchableOpacity;
-  });
 
   // Custom constant date, so our snapshots don't fail when the date changes
   const customDate = new Date(2018, 1, 3, 15, 30);
@@ -90,24 +79,20 @@ describe('ChatCard', () => {
   });
 
   it('calls onPress passed from props when ChatCard is pressed', () => {
-    const onPressEvent = jest.fn(() => {
-      console.log('On press event')
-    });
+    const onPressMock = jest.fn();
 
-    const tree = renderer.create(
+    const component = shallow(
       <ChatCard
         name="James Gordon"
         latestMessage={{
           text: "Hey man how is it going? Long time no see.",
           createdAt: new Date()
         }}
-        onPress={onPressEvent}
+        onPress={onPressMock}
       />
     );
-
-    // Call on press
-    tree.toJSON().props.onPress();
-
-    expect(onPressEvent.mock.calls.length).toBe(1);
+    const sendMessage = component.find('TouchableOpacity');
+    sendMessage.simulate('Press');
+    expect(onPressMock.mock.calls.length).toBe(1);
   });
 });

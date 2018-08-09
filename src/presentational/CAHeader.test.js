@@ -1,23 +1,16 @@
 // @flow
 import React from 'react';
-import { View, Text, Platform } from 'react-native';
+import { View, Text } from 'react-native';
 import CAHeader from './CAHeader';
 import renderer from 'react-test-renderer';
 
 describe('CAHeader', () => {
-  it('renders correctly when the Platform is ios', () => {
-    const tree = renderer.create(<CAHeader />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('renders correctly when the Platform is android', () => {
-    Platform.OS = 'android';
+  it('renders correctly', () => {
     const tree = renderer.create(<CAHeader />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders correctly when leftItem is provided', () => {
-    Platform.OS = 'android';
     const tree = renderer.create(
       <CAHeader
         leftItem={
@@ -31,7 +24,6 @@ describe('CAHeader', () => {
   });
 
   it('renders correctly when rightItem is provided', () => {
-    Platform.OS = 'android';
     const tree = renderer.create(
       <CAHeader
         rightItem={
@@ -45,7 +37,6 @@ describe('CAHeader', () => {
   });
 
   it('renders correctly when leftItem and rightItem are provided', () => {
-    Platform.OS = 'android';
     const tree = renderer.create(
       <CAHeader
         leftItem={

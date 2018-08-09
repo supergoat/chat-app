@@ -24,10 +24,8 @@ const RootStack : NavigationContainerProps = createStackNavigator(
     }
   },
   {
-    headerMode: 'none'
-  },
-  {
-    initialRouteName: 'Home',
+    headerMode: 'none',
+    initialRouteName: 'Chat'
   }
 );
 

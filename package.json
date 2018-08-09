@@ -15,14 +15,18 @@
   "devDependencies": {
     "babel-jest": "23.2.0",
     "babel-preset-react-native": "^5",
+    "enzyme": "^3.4.0",
+    "enzyme-adapter-react-16": "^1.2.0",
     "flow-bin": "0.75.0",
     "jest": "23.3.0",
+    "react-dom": "^16.4.2",
     "react-test-renderer": "16.4.1"
   },
   "jest": {
     "preset": "react-native",
     "transform": {
       "^.+\\js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+    },
+    "setupFiles": ["<rootDir>/setupTests.js"]
   }
 }
