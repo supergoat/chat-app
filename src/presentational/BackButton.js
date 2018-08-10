@@ -31,7 +31,10 @@ class BackButton extends Component<Props> {
         onPress={() => navigation.pop()}
         style={styles.back}
       >
-        <Image source={Platform.OS === 'ios' ? chevronLeft : arrowBack} style={styles.backIcon} />
+        <Image
+          source={Platform.OS === 'ios' ? chevronLeft : arrowBack}
+          style={styles.backIcon}
+        />
       </TouchableOpacity>
     )
   }

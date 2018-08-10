@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 import BackButton from '../presentational/BackButton';
 import type { NavigationScreenProp } from 'react-navigation';
 import {
+  Keyboard,
   Text,
+  TouchableWithoutFeedback,
   View
 } from 'react-native';
 import CAHeader from '../presentational/CAHeader';
@@ -25,14 +27,16 @@ class ChatScreen extends Component<Props> {
     const { navigation } = this.props;
 
     return (
-      <View style={styles.container}>
-        <CAHeader
-          title={'ChatScreen'}
-          leftItem={<BackButton navigation={navigation} />}
-        />
-        <Text style={{flex: 1}}>ChatScreen</Text>
-        <MessageInput />
-      </View>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View style={styles.container}>
+          <CAHeader
+            title={'ChatScreen'}
+            leftItem={<BackButton navigation={navigation} />}
+          />
+          <Text style={{flex: 1}}>ChatScreen</Text>
+          <MessageInput onSend={(message) => console.log(message)} />
+        </View>
+      </TouchableWithoutFeedback>
     );
   }
 }

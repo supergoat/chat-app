@@ -5,10 +5,6 @@ import HomeScreen from './src/screens/HomeScreen';
 import ChatScreen from './src/screens/ChatScreen';
 import CAColors from './src/common/CAColors';
 
-
-// ReactNavigation.SafeAreaView.setStatusBarHeight(0);
-
-
 /** ============================================================================
 <RootStack />
 --------------------------------------------------------------------------------
@@ -25,7 +21,7 @@ const RootStack : NavigationContainerProps = createStackNavigator(
   },
   {
     headerMode: 'none',
-    initialRouteName: 'Chat'
+    initialRouteName: 'Home'
   }
 );
 
