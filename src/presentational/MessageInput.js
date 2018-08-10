@@ -18,21 +18,19 @@ import sendMessageIcon from '../assets/img/send_message.png';
 ============================================================================= */
 const INPUT_HEIGHT_ANDROID = 42;
 const INPUT_HEIGHT_IOS = 35;
-const IPHONE_X_HEIGHT_ADJUSTMENT = 30;
+const IPHONE_X_FOOTER_HEIGHT_ADJUSTMENT = 30;
 
 /** ============================================================================
-<MessageInput />
+<MessageInput
+  onSend={(string) => void}
+/>
 --------------------------------------------------------------------------------
-Used to send messages
-@param { function } onSendMessage - Function called when viewer sends message
+Enables the viewer to type and send a message
+@param { function } onSend - Function called when viewer sends message
 @property { string } message - The message being send
 ============================================================================= */
-type Props = {
-  onSendMessage: (string) => void
-}
-type State = {
-  message: string
-}
+type Props = { onSend: (string) => void }
+type State = { message: string }
 class MessageInput extends Component<Props, State> {
 
   // TODO: remove padding bottom for iphone X when keyboard is open
@@ -44,8 +42,19 @@ class MessageInput extends Component<Props, State> {
   }
 
   onSendMessage = () => {
-    const message = this.state.message
+    const { onSend } = this.props;
+    const { message } = this.state;
+
+    const trimmedMessage = message.trim();
+
+    // Return if message is empty
+    if (trimmedMessage.length === 0) return;
+
+    // Clear the text input
     this.setState({ message: '' });
+
+    // call the send
+    onSend(trimmedMessage);
   }
 
   render() {
@@ -57,7 +66,7 @@ class MessageInput extends Component<Props, State> {
       >
         <View style={[
           styles.messageInput,
-          { paddingBottom: isIphoneX() ? IPHONE_X_HEIGHT_ADJUSTMENT : 0 }
+          { paddingBottom: isIphoneX() ? IPHONE_X_FOOTER_HEIGHT_ADJUSTMENT : 0 }
         ]}>
           <TextInput
             multiline
