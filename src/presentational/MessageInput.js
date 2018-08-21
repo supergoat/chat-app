@@ -103,7 +103,10 @@ const styles = CAStyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    margin: 8
+    margin: 8,
+    android: {
+      marginTop: 0
+    }
   },
   textInput: {
     flex: 1,
@@ -120,10 +123,9 @@ const styles = CAStyleSheet.create({
       minHeight: INPUT_HEIGHT_IOS
     },
     android: {
-      borderWidth: 0.5,
       borderRadius: INPUT_HEIGHT_ANDROID / 2,
-      borderColor: CAColors.riverBed,
-      minHeight: INPUT_HEIGHT_ANDROID
+      minHeight: INPUT_HEIGHT_ANDROID,
+      elevation: 0.5
     }
   },
   sendMessage: {
@@ -139,6 +141,7 @@ const styles = CAStyleSheet.create({
       width: INPUT_HEIGHT_ANDROID,
       borderRadius: INPUT_HEIGHT_ANDROID / 2,
       backgroundColor: CAColors.riverBed,
+      elevation: 1
     }
   },
   sendMessageIcon: {

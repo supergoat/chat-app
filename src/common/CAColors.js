@@ -1,6 +1,7 @@
 /* Color Definitions
 ============================================================================= */
 const NAMED_COLORS: COLOR_TYPES = {
+  black: '#000000',
   white: "#FFFFFF",
   osloGrey: '#7e8890',
   silver: '#CDCDCD',
@@ -13,7 +14,9 @@ const NAMED_COLORS: COLOR_TYPES = {
   alabaster: '#F9F9F9',
   alabasterLight: '#FBFBFB',
   apple: '#32CD32',
-  forestGreen: '#2BAD2B'
+  forestGreen: '#2BAD2B',
+  orinoco: '#DFF8C8',
+  bone: '#E9DBCE'
 };
 
 /* Color Type Definitions
