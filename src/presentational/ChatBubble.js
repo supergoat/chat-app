@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import CAStyleSheet from "../common/CAStyleSheet";
 import CAColors from "../common/CAColors";
-import { getTimeStamp } from '../common/CAHelpers';
+import { formatTime } from '../common/CAHelpers';
 
 
 /** ============================================================================
@@ -41,7 +41,7 @@ class ChatBubble extends Component<Props> {
           {/* HACK:  Add this to position the timeStamp correctly */}
           <Text style={styles.hide}>{'xxxxxx'}</Text>
         </Text>
-        <Text style={styles.timeStamp}>{getTimeStamp(message.createdAt)}</Text>
+        <Text style={styles.timeStamp}>{formatTime(message.createdAt)}</Text>
       </View>
     )
   }

@@ -25,32 +25,24 @@ type Props = {
 };
 class ChatScreen extends Component<Props> {
 
-  /**
-   * FIXME: iOS issue
-   * @description Potential issue with loading more data, when the
-   * viewer scrolls to the top and the api request fails.
-   * @example
-   *  Viewer scrolls to the top. onPullToRefresh is called. Api request fails.
-   *  onEndReached in <Chat /> has already being called and will not be called
-   *  again. Viewer has no way to load more data
-   */
+
+  // TODO: Replace 'Panayiotis' in ChatBubble and MessageInput with the viewer
 
   constructor(props: Props) {
     super(props);
 
     this.state = {
       refreshing: false,
-      messages: messages,
+      messages: originalMessages,
       totalMessages: 13
     };
   }
 
   // Loads more messages when the viewer pulls to refresh
-  onPullToRefresh = () => {
-
-    if (this.state.messages.length === this.state.totalMessages) return;
+  onLoadMoreMessages = () => {
 
     const { refreshing, messages } = this.state;
+
     // Return early if already refreshing
     if (refreshing) return;
 
@@ -77,8 +69,24 @@ class ChatScreen extends Component<Props> {
 
   }
 
+  onSendMessage = (text) => {
+    const message = {
+      id: Math.random().toString(),
+      text: text,
+      createdAt: new Date(),
+      createdBy: 'Panayiotis'
+    }
+    const copyMessages = this.state.messages.slice();
+    copyMessages.unshift(message)
+    this.setState({
+      messages: copyMessages,
+      totalMessages: this.state.totalMessages + 1
+    })
+
+  }
+
   render() {
-    const { refreshing, messages } = this.state;
+    const { refreshing, messages, totalMessages } = this.state;
     const { navigation } = this.props;
 
     return (
@@ -88,12 +96,15 @@ class ChatScreen extends Component<Props> {
           leftItem={<BackButton navigation={navigation} />}
         />
         <Chat
-          isFirstMessage={this.state.messages.length === this.state.totalMessages}
+          viewer={'Panayiotis'}
+          didLoadAllMessages={messages.length === totalMessages}
           refreshing={refreshing}
-          onPullToRefresh={this.onPullToRefresh}
+          onLoadMoreMessages={this.onLoadMoreMessages}
           messages={messages}
         />
-        <MessageInput onSend={(message) => console.log(message)} />
+        <MessageInput
+          onSend={this.onSendMessage}
+        />
       </View>
     );
   }
@@ -112,7 +123,7 @@ const styles = CAStyleSheet.create({
 ============================================================================= */
 export default ChatScreen;
 
-const messages = [
+const originalMessages = [
   { id: '13', text: ':D', createdAt: new Date(), createdBy: 'Panayiotis'},
   { id: '12', text: ':)', createdAt: new Date(), createdBy: 'Alex'},
   { id: '11', text: 'See you!', createdAt: new Date(), createdBy: 'Alex'},
