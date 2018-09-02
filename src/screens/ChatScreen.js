@@ -25,23 +25,21 @@ type Props = {
 };
 class ChatScreen extends Component<Props> {
 
-
   // TODO: Replace 'Panayiotis' in ChatBubble and MessageInput with the viewer
+  state = {
+    refreshing: false,
+    messages: originalMessages,
+    totalMessages: 13
+  };
 
-  constructor(props: Props) {
-    super(props);
-
-    this.state = {
-      refreshing: false,
-      messages: originalMessages,
-      totalMessages: 13
-    };
-  }
 
   // Loads more messages when the viewer pulls to refresh
   onLoadMoreMessages = () => {
 
-    const { refreshing, messages } = this.state;
+    const { refreshing, messages, totalMessages } = this.state;
+
+    // If no more messages to load return
+    if (messages.length === totalMessages) return;
 
     // Return early if already refreshing
     if (refreshing) return;
@@ -97,7 +95,6 @@ class ChatScreen extends Component<Props> {
         />
         <Chat
           viewer={'Panayiotis'}
-          didLoadAllMessages={messages.length === totalMessages}
           refreshing={refreshing}
           onLoadMoreMessages={this.onLoadMoreMessages}
           messages={messages}

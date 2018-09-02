@@ -3,6 +3,7 @@
 exports[`Chat renders correctly 1`] = `
 <RCTScrollView
   ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
   data={
     Array [
       Object {
@@ -30,6 +31,8 @@ exports[`Chat renders correctly 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  refreshOffset={20}
+  refreshing={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -52,6 +55,20 @@ exports[`Chat renders correctly 1`] = `
   windowSize={21}
 >
   <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View />
+    </View>
     <View
       onLayout={[Function]}
       style={
@@ -147,19 +164,17 @@ exports[`Chat renders correctly 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingVertical": 7.5,
-          }
-        }
-      >
-        <ActivityIndicator
-          animating={false}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
-        />
+      <View>
+        <View
+          style={false}
+        >
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
       </View>
     </View>
   </View>
@@ -169,6 +184,7 @@ exports[`Chat renders correctly 1`] = `
 exports[`Chat renders correctly when didLoadAllMessages is set to true 1`] = `
 <RCTScrollView
   ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
   data={
     Array [
       Object {
@@ -196,6 +212,8 @@ exports[`Chat renders correctly when didLoadAllMessages is set to true 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  refreshOffset={20}
+  refreshing={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -218,6 +236,20 @@ exports[`Chat renders correctly when didLoadAllMessages is set to true 1`] = `
   windowSize={21}
 >
   <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View />
+    </View>
     <View
       onLayout={[Function]}
       style={
@@ -313,13 +345,18 @@ exports[`Chat renders correctly when didLoadAllMessages is set to true 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingVertical": 7.5,
-          }
-        }
-      />
+      <View>
+        <View
+          style={false}
+        >
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
     </View>
   </View>
 </RCTScrollView>
@@ -328,6 +365,7 @@ exports[`Chat renders correctly when didLoadAllMessages is set to true 1`] = `
 exports[`Chat renders correctly when refreshing is set to true 1`] = `
 <RCTScrollView
   ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
   data={
     Array [
       Object {
@@ -355,6 +393,8 @@ exports[`Chat renders correctly when refreshing is set to true 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  refreshOffset={20}
+  refreshing={true}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -377,6 +417,20 @@ exports[`Chat renders correctly when refreshing is set to true 1`] = `
   windowSize={21}
 >
   <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View />
+    </View>
     <View
       onLayout={[Function]}
       style={
@@ -472,19 +526,21 @@ exports[`Chat renders correctly when refreshing is set to true 1`] = `
         }
       }
     >
-      <View
-        style={
-          Object {
-            "paddingVertical": 7.5,
+      <View>
+        <View
+          style={
+            Object {
+              "paddingVertical": 12,
+            }
           }
-        }
-      >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
-        />
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
       </View>
     </View>
   </View>
