@@ -26,7 +26,7 @@ const IPHONE_X_FOOTER_HEIGHT_ADJUSTMENT = 30;
 />
 --------------------------------------------------------------------------------
 Enables the viewer to type and send a message
-@param { function } onSend - Function called when viewer sends message
+@param { function } onSendMessage - Function called when viewer sends message
 @property { string } message - The message being send
 ============================================================================= */
 type Props = { onSend: (string) => void }

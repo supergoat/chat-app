@@ -1,0 +1,548 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat renders correctly 1`] = `
+<RCTScrollView
+  ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
+  data={
+    Array [
+      Object {
+        "createdAt": 1901-02-03T09:05:00.000Z,
+        "createdBy": "Panayiotis",
+        "id": "1",
+        "text": "Hello!",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  invertStickyHeaders={true}
+  inverted={true}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshOffset={20}
+  refreshing={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Array [
+      Object {
+        "transform": Array [
+          Object {
+            "scaleY": -1,
+          },
+        ],
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "flexDirection": "column-reverse",
+          },
+          Object {
+            "transform": Array [
+              Object {
+                "scaleY": -1,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 6,
+              "marginBottom": 3,
+              "marginHorizontal": 20,
+              "maxWidth": "78%",
+              "paddingHorizontal": 7,
+              "paddingVertical": 5,
+              "shadowColor": "#7e8890",
+              "shadowOffset": Object {
+                "height": 0.5,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+            },
+            Object {
+              "backgroundColor": "#DFF8C8",
+            },
+            Object {
+              "alignSelf": "flex-end",
+            },
+            Object {
+              "marginBottom": 12,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 15,
+              "lineHeight": 19,
+            }
+          }
+        >
+          Hello!
+          <Text
+            style={
+              Object {
+                "color": "transparent",
+                "opacity": 0,
+              }
+            }
+          >
+            xxxxxx
+          </Text>
+        </Text>
+        <Text
+          style={
+            Object {
+              "bottom": 3,
+              "color": "#7e8890",
+              "fontSize": 11,
+              "position": "absolute",
+              "right": 8,
+            }
+          }
+        >
+          09:05
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View>
+        <View
+          style={false}
+        >
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Chat renders correctly when didLoadAllMessages is set to true 1`] = `
+<RCTScrollView
+  ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
+  data={
+    Array [
+      Object {
+        "createdAt": 1901-02-03T09:05:00.000Z,
+        "createdBy": "Panayiotis",
+        "id": "1",
+        "text": "Hello!",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  invertStickyHeaders={true}
+  inverted={true}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshOffset={20}
+  refreshing={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Array [
+      Object {
+        "transform": Array [
+          Object {
+            "scaleY": -1,
+          },
+        ],
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "flexDirection": "column-reverse",
+          },
+          Object {
+            "transform": Array [
+              Object {
+                "scaleY": -1,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 6,
+              "marginBottom": 3,
+              "marginHorizontal": 20,
+              "maxWidth": "78%",
+              "paddingHorizontal": 7,
+              "paddingVertical": 5,
+              "shadowColor": "#7e8890",
+              "shadowOffset": Object {
+                "height": 0.5,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+            },
+            Object {
+              "backgroundColor": "#DFF8C8",
+            },
+            Object {
+              "alignSelf": "flex-end",
+            },
+            Object {
+              "marginBottom": 12,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 15,
+              "lineHeight": 19,
+            }
+          }
+        >
+          Hello!
+          <Text
+            style={
+              Object {
+                "color": "transparent",
+                "opacity": 0,
+              }
+            }
+          >
+            xxxxxx
+          </Text>
+        </Text>
+        <Text
+          style={
+            Object {
+              "bottom": 3,
+              "color": "#7e8890",
+              "fontSize": 11,
+              "position": "absolute",
+              "right": 8,
+            }
+          }
+        >
+          09:05
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View>
+        <View
+          style={false}
+        >
+          <ActivityIndicator
+            animating={false}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Chat renders correctly when refreshing is set to true 1`] = `
+<RCTScrollView
+  ListFooterComponent={[Function]}
+  ListHeaderComponent={[Function]}
+  data={
+    Array [
+      Object {
+        "createdAt": 1901-02-03T09:05:00.000Z,
+        "createdBy": "Panayiotis",
+        "id": "1",
+        "text": "Hello!",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  invertStickyHeaders={true}
+  inverted={true}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshOffset={20}
+  refreshing={true}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Array [
+      Object {
+        "transform": Array [
+          Object {
+            "scaleY": -1,
+          },
+        ],
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "flexDirection": "column-reverse",
+          },
+          Object {
+            "transform": Array [
+              Object {
+                "scaleY": -1,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 6,
+              "marginBottom": 3,
+              "marginHorizontal": 20,
+              "maxWidth": "78%",
+              "paddingHorizontal": 7,
+              "paddingVertical": 5,
+              "shadowColor": "#7e8890",
+              "shadowOffset": Object {
+                "height": 0.5,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+            },
+            Object {
+              "backgroundColor": "#DFF8C8",
+            },
+            Object {
+              "alignSelf": "flex-end",
+            },
+            Object {
+              "marginBottom": 12,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 15,
+              "lineHeight": 19,
+            }
+          }
+        >
+          Hello!
+          <Text
+            style={
+              Object {
+                "color": "transparent",
+                "opacity": 0,
+              }
+            }
+          >
+            xxxxxx
+          </Text>
+        </Text>
+        <Text
+          style={
+            Object {
+              "bottom": 3,
+              "color": "#7e8890",
+              "fontSize": 11,
+              "position": "absolute",
+              "right": 8,
+            }
+          }
+        >
+          09:05
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scaleY": -1,
+            },
+          ],
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "paddingVertical": 12,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

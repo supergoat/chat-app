@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatBubble renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 6,
+        "marginBottom": 3,
+        "marginHorizontal": 20,
+        "maxWidth": "78%",
+        "paddingHorizontal": 7,
+        "paddingVertical": 5,
+        "shadowColor": "#7e8890",
+        "shadowOffset": Object {
+          "height": 0.5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 0,
+      },
+      Object {
+        "backgroundColor": "#DFF8C8",
+      },
+      Object {
+        "alignSelf": "flex-end",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": 15,
+        "lineHeight": 19,
+      }
+    }
+  >
+    Hello!
+    <Text
+      style={
+        Object {
+          "color": "transparent",
+          "opacity": 0,
+        }
+      }
+    >
+      xxxxxx
+    </Text>
+  </Text>
+  <Text
+    style={
+      Object {
+        "bottom": 3,
+        "color": "#7e8890",
+        "fontSize": 11,
+        "position": "absolute",
+        "right": 8,
+      }
+    }
+  >
+    09:05
+  </Text>
+</View>
+`;
+
+exports[`ChatBubble renders correctly when isAlignedLeft is set to to true 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 6,
+        "marginBottom": 3,
+        "marginHorizontal": 20,
+        "maxWidth": "78%",
+        "paddingHorizontal": 7,
+        "paddingVertical": 5,
+        "shadowColor": "#7e8890",
+        "shadowOffset": Object {
+          "height": 0.5,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 0,
+      },
+      Object {
+        "backgroundColor": "#F9F9F9",
+      },
+      Object {
+        "alignSelf": "flex-start",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": 15,
+        "lineHeight": 19,
+      }
+    }
+  >
+    Hello!
+    <Text
+      style={
+        Object {
+          "color": "transparent",
+          "opacity": 0,
+        }
+      }
+    >
+      xxxxxx
+    </Text>
+  </Text>
+  <Text
+    style={
+      Object {
+        "bottom": 3,
+        "color": "#7e8890",
+        "fontSize": 11,
+        "position": "absolute",
+        "right": 8,
+      }
+    }
+  >
+    09:05
+  </Text>
+</View>
+`;
